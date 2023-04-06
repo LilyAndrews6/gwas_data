@@ -5,110 +5,6 @@ Download packages required to create simulation of GWAS data.
 
 ``` r
 library(VariantAnnotation)
-```
-
-    ## Loading required package: BiocGenerics
-
-    ## 
-    ## Attaching package: 'BiocGenerics'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     IQR, mad, sd, var, xtabs
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     anyDuplicated, append, as.data.frame, basename, cbind, colnames,
-    ##     dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
-    ##     grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
-    ##     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-    ##     rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
-    ##     union, unique, unsplit, which.max, which.min
-
-    ## Loading required package: MatrixGenerics
-
-    ## Loading required package: matrixStats
-
-    ## 
-    ## Attaching package: 'MatrixGenerics'
-
-    ## The following objects are masked from 'package:matrixStats':
-    ## 
-    ##     colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
-    ##     colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
-    ##     colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
-    ##     colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
-    ##     colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
-    ##     colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
-    ##     colWeightedMeans, colWeightedMedians, colWeightedSds,
-    ##     colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
-    ##     rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
-    ##     rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
-    ##     rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
-    ##     rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
-    ##     rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
-    ##     rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
-    ##     rowWeightedSds, rowWeightedVars
-
-    ## Loading required package: GenomeInfoDb
-
-    ## Loading required package: S4Vectors
-
-    ## Loading required package: stats4
-
-    ## 
-    ## Attaching package: 'S4Vectors'
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     expand.grid, I, unname
-
-    ## Loading required package: IRanges
-
-    ## Loading required package: GenomicRanges
-
-    ## Loading required package: SummarizedExperiment
-
-    ## Loading required package: Biobase
-
-    ## Welcome to Bioconductor
-    ## 
-    ##     Vignettes contain introductory material; view with
-    ##     'browseVignettes()'. To cite Bioconductor, see
-    ##     'citation("Biobase")', and for packages 'citation("pkgname")'.
-
-    ## 
-    ## Attaching package: 'Biobase'
-
-    ## The following object is masked from 'package:MatrixGenerics':
-    ## 
-    ##     rowMedians
-
-    ## The following objects are masked from 'package:matrixStats':
-    ## 
-    ##     anyMissing, rowMedians
-
-    ## Loading required package: Rsamtools
-
-    ## Loading required package: Biostrings
-
-    ## Loading required package: XVector
-
-    ## 
-    ## Attaching package: 'Biostrings'
-
-    ## The following object is masked from 'package:base':
-    ## 
-    ##     strsplit
-
-    ## 
-    ## Attaching package: 'VariantAnnotation'
-
-    ## The following object is masked from 'package:base':
-    ## 
-    ##     tabulate
-
-``` r
 library(gprofiler2)
 ```
 
@@ -148,17 +44,17 @@ See output of simulated GWAS data
 head(df)
 ```
 
-    ##         gene_name         ID Allele1 Allele2 chr        bp       MarkerName
-    ## 1 ENSG00000123364 rs68538093       A       T   8  78536096   8:78536096:A:T
-    ## 2 ENSG00000123364 rs69461568       C       G  20 104510935 20:104510935:C:G
-    ## 3 ENSG00000123364  rs7745278       T       A   1 121902851  1:121902851:T:A
-    ## 4 ENSG00000123364 rs59582645       A       T   9  16970128   9:16970128:A:T
-    ## 5 ENSG00000123364 rs73077609       T       A  12   3627487   12:3627487:T:A
-    ## 6 ENSG00000123364 rs70192785       T       A  18 119587853 18:119587853:T:A
-    ##          AF        ES         SE  SS          p
-    ## 1 0.4138154 0.3123727  0.1629037 100 0.05517061
-    ## 2 0.3626379 0.6030055 49.7473572 100 0.99032879
-    ## 3 0.4353666 0.6086147  0.3860676 100 0.11492310
-    ## 4 0.4875335 0.2382613  0.2189072 100 0.27641314
-    ## 5 0.3842818 0.6843204  1.0713205 100 0.52297682
-    ## 6 0.4503532 0.9103380  2.5134714 100 0.71721487
+    ##         gene_name         ID Allele1 Allele2 chr        bp      MarkerName
+    ## 1 ENSG00000102081 rs76943034       A       T   9  39627072  9:39627072:A:T
+    ## 2 ENSG00000102081 rs16312248       T       A   3  52399547  3:52399547:T:A
+    ## 3 ENSG00000102081 rs29618759       G       C   5 108153621 5:108153621:G:C
+    ## 4 ENSG00000102081 rs91797184       A       T   8  49485561  8:49485561:A:T
+    ## 5 ENSG00000102081 rs26432326       G       C  18  84874009 18:84874009:G:C
+    ## 6 ENSG00000102081 rs93848964       C       G   2  40100752  2:40100752:C:G
+    ##          AF        ES         SE  SS         p
+    ## 1 0.3710578 0.2091585 0.23896056 100 0.3814191
+    ## 2 0.1430606 0.4828864 1.77042508 100 0.7850441
+    ## 3 0.1263383 0.0529422 0.04633079 100 0.2531631
+    ## 4 0.4529944 0.6188569 8.55818183 100 0.9423538
+    ## 5 0.3251773 0.5006739 0.45518604 100 0.2713616
+    ## 6 0.3389784 0.3565727 0.42132797 100 0.3973817
